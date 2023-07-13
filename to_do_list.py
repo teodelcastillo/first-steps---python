@@ -21,7 +21,7 @@ def add_task():
     print("Task added successfully.")
 
 def remove_task():
-    index = int(input("Enter index of task to remove: "))
+    index = int(input("Enter number of task to remove: "))-1
     if index >= 0 and index < len(tasks):
         task = tasks.pop(index)
         print(f"Task '{task}' removed successfully.")
@@ -113,5 +113,5 @@ while True:
     elif choice == '2':
         # Delete the whole list and restart
         delete_and_restart()
-else:
+    else:
         print("Invalid choice. Please try again.")
